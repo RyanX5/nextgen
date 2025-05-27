@@ -41,7 +41,7 @@ export default function Hero() {
 
                 {/* Form Section */}
                 <form
-                    className="flex flex-col gap-4 md:flex-row md:gap-2 md:w-full md:max-w-sm mx-auto items-center mt-12"
+                    className="flex flex-col gap-4 max-w-5/6 md:flex-row md:gap-2 md:w-full md:max-w-sm mx-auto items-center mt-12"
                 >
                     <Input
                         type="email"

@@ -10,7 +10,7 @@ import { useEffect, useState } from "react"
 
 export function ModeToggle() {
     const { setTheme } = useTheme()
-    const [light, setLight] = useState(false);
+    const [light, setLight] = useState(true);
 
     const toggle = () => {
         setLight(!light);

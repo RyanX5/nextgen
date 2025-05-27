@@ -15,7 +15,7 @@ export default function Home() {
         <Hero />
         <LogoSection />
         <Features />
-        {/* <Footer /> */}
+        <Footer />
       </div >
     </AuroraBackground >
   );

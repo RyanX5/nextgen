@@ -5,7 +5,7 @@ import { InfoCard } from "./card";
 export default function Features() {
     return (
         <div className="min-h-screen flex flex-col items-center pt-12 z-10 text-center p-4 mt-24">
-            <h1 className="z-10 text-4xl lg:text-7xl font-bold mb-4 leading-tight tracking-tighter inline-flex gap-2 items-center">
+            <h1 className="z-10 text-4xl md:text-7xl font-bold mb-4 leading-tight tracking-tighter inline-flex gap-2 items-center">
                 How We Work
             </h1>
             <h2 className="z-10 text-base lg:text-2xl text-muted-foreground max-w-3xl mx-auto mb-24">
