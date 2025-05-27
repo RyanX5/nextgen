@@ -4,7 +4,7 @@ import { ModeToggle } from "../ui/mode-toggle";
 
 export default function NavBar() {
     return (
-        <div className="mx-4 z-10 mt-4 sticky top-4">
+        <div className="mx-4 z-50 mt-4 sticky top-4">
             <nav className="flex justify-between items-center border-foreground/10 border rounded-xl px-4 py-2 w-full max-w-6xl mx-auto backdrop-blur-md shadow-md/10 shadow-foreground">
                 <div className="flex gap-2 items-center">
                     <Globe />

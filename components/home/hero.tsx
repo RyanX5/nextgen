@@ -30,7 +30,9 @@ export default function Hero() {
             </div>
             <section className="mb-22">
                 <h1 className="text-4xl lg:text-7xl font-bold mb-4 leading-tight tracking-tighter">
-                    Empowering Businesses to <span className="text-muted-foreground">Lead, Innovate, and Grow</span>
+                    Empowering Businesses to <span className="text-muted-foreground">
+                        Lead, Innovate, and Grow
+                    </span>
                 </h1>
                 <h2 className="text-base lg:text-2xl text-muted-foreground max-w-3xl mx-auto">
                     We partner with you to transform ideas into impact — through tailored
@@ -39,7 +41,6 @@ export default function Hero() {
 
                 {/* Form Section */}
                 <form
-                    onSubmit={(e) => e.preventDefault()}
                     className="flex flex-col gap-4 md:flex-row md:gap-2 md:w-full md:max-w-sm mx-auto items-center mt-12"
                 >
                     <Input
