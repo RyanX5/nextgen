@@ -47,6 +47,7 @@ export const ServicesCard: React.FC<CardProps> = ({ title, description, logo, ct
                     src={image}
                     alt="..."
                     fill
+                    placeholder="blur"
                     className="object-cover"
                 />
             </div>
