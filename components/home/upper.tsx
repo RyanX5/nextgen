@@ -9,7 +9,7 @@ export default function Upper() {
     if (!visible) return null;
 
     return (
-        <div className="bg-foreground text-background flex items-center justify-between px-4 py-1 text-xs md:text-sm z-1">
+        <div className="bg-gradient-to-r from-[#b3aef5] via-[#d7cbe7] to-[#eaa879] text-background  flex items-center justify-between px-4 py-1 text-xs md:text-sm z-1">
             <div className="w-full text-center">
                 <a href="https://nextgeneration.ae" className="hover:underline">
                     Not in the US? <span className="font-semibold">Visit our Dubai website.</span>

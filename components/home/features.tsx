@@ -14,7 +14,7 @@ export default function Features() {
             </h2>
 
             <InfoCard
-                color="violet"
+
                 heading="Planning & Research"
                 subHeading="We start by analyzing current market trends, evaluating communication behaviors, and exploring demographic insights to uncover what truly motivates your target audience."
                 icon={<SquareChartGantt className="w-36 h-36" />}
@@ -24,7 +24,7 @@ We start by analyzing current market trends, evaluating communication behaviors,
 
 
             <InfoCard
-                color="blue"
+
                 heading="Ideation"
                 subHeading="Ideation is where we bring that understanding to life through smart, creative, and actionable strategies."
                 icon={<Lightbulb className="w-36 h-36" />}
@@ -34,7 +34,7 @@ At Next Generation Consultancy (NGC), we don’t just generate ideas; we develop
             />
 
             <InfoCard
-                color="green"
+
                 heading="Optimization"
                 subHeading="We believe every campaign, message, and tactic has room to evolve. Through continuous monitoring and strategic refinement, we turn good results into great ones."
                 icon={<Gauge className="w-36 h-36" />}

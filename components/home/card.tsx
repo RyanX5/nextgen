@@ -1,12 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Button } from "../ui/button";
-import { Info } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 
 interface InfoCardProps {
-    color?: "violet" | "blue" | "red" | "green" | "yellow" | "pink";
     heading: string;
     subHeading: string;
     icon: React.ReactNode;
@@ -14,60 +12,38 @@ interface InfoCardProps {
     details: string;
 }
 
-const colorVariants = {
-    violet: {
-        gradient: "from-violet-500/100 to-transparent",
-        border: "border-violet-500/20",
-    },
-    blue: {
-        gradient: "from-blue-500/100 to-transparent",
-        border: "border-blue-500/20",
-    },
-    red: {
-        gradient: "from-red-500/100 to-transparent",
-        border: "border-red-500/20",
-    },
-    green: {
-        gradient: "from-emerald-500/100 to-transparent",
-        border: "border-green-500/20",
-    },
-    yellow: {
-        gradient: "from-yellow-500/100 to-transparent",
-        border: "border-yellow-500/20",
-    },
-    pink: {
-        gradient: "from-pink-500/100 to-transparent",
-        border: "border-pink-500/20",
-    },
-};
+
 
 export const InfoCard: React.FC<InfoCardProps> = ({
-    color = "violet",
+    // color = "violet",
     heading,
     subHeading,
     icon,
     last = false,
     details,
 }) => {
-    const { gradient, border } = colorVariants[color];
+    // const { gradient, border } = colorVariants[color];
     const [info, setInfo] = useState<boolean>(false);
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     return (
         <motion.div
-            className="md:px-12 w-full max-w-6xl"
+            className=" w-full max-w-6xl"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut" }}
         >
             <motion.div
-                whileHover={{ scale: 1.01 }}
-                className={`group relative md:h-140 rounded-xl px-6 sm:px-10 md:px-12 py-24 sm:py-32 md:mt-12 mb-24 backdrop-blur-xl bg-background/10 text-foreground border ${border} transition-all`}
-            >
-                <span
-                    className={`z-0 absolute inset-0 bg-radial ${gradient} blur-3xl group-hover:animate-pulse opacity-30 dark:opacity-30`}
-                />
+                ref={ref}
 
+                className={`group relative md:h-140 rounded-xl px-6 sm:px-10 md:px-12 py-24 sm:py-32 md:mt-12 mb-24  bg-background text-foreground border  border-neutral-700 transition-all`}
+            >
+                <div
+                    className={`absolute inset-0 -z-10 rounded-2xl transition-all duration-700 ease-in-out ${isInView ? "blur-sm md:blur-lg opacity-50" : "blur-none"
+                        } bg-gradient-to-r from-[#b3aef5] via-[#d7cbe7] to-[#eaa879]`}
+                />
                 {!last && (
                     <div>
                         <span className="w-px absolute bottom-0 translate-y-full h-36 bg-muted-foreground/10" />
@@ -87,8 +63,8 @@ export const InfoCard: React.FC<InfoCardProps> = ({
                             className="relative flex flex-col md:flex-row text-center md:text-left items-center z-10"
                         >
                             <div className="flex flex-col items-center gap-6 md:gap-4 text-center">
-                                <p className="font-bold text-2xl md:3xl tracking-tighter inline-flex gap-2 items-center justify-center">
-                                    Details <Info />
+                                <p className="font-bold text-2xl md:3xl tracking-tighter inline-flex gap-2 items-center justify-center text-transparent bg-clip-text bg-gradient-to-r from-[#b3aef5] via-[#d7cbe7] to-[#eaa879]">
+                                    Details
                                 </p>
                                 <p className="text-muted-foreground md:max-w-2/3">{details}</p>
                                 <Button
@@ -110,7 +86,7 @@ export const InfoCard: React.FC<InfoCardProps> = ({
                             className="relative flex flex-col md:flex-row text-center md:text-left items-center z-10"
                         >
                             <div className="flex flex-col items-center md:items-start gap-4 md:gap-2 md:w-2/3">
-                                <p className="font-bold text-2xl md:text-3xl tracking-tighter">{heading}</p>
+                                <p className="font-bold text-2xl md:text-3xl tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-[#b3aef5] via-[#d7cbe7] to-[#eaa879]">{heading}</p>
                                 <p className="text-muted-foreground md:max-w-2/3">
                                     {subHeading}
                                 </p>

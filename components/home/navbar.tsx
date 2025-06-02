@@ -13,7 +13,7 @@ export default function NavBar() {
 
                 {/* For Mobile */}
                 <div className="md:hidden flex gap-2 items-center">
-                    <ModeToggle />
+                    {/* <ModeToggle /> */}
 
                     <Menu />
                 </div>
@@ -24,7 +24,7 @@ export default function NavBar() {
                     <li><a href="/" className="hover:bg-accent rounded-xl px-4 py-2 transition-colors">About</a></li>
                     <li><a href="/" className="hover:bg-accent rounded-xl px-4 py-2 transition-colors">Portfolio</a></li>
                     <li><Button>Contact</Button></li>
-                    <li><ModeToggle /></li>
+                    {/* <li><ModeToggle /></li> */}
                 </ul>
             </nav>
         </div>
