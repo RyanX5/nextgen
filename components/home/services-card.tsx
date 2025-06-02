@@ -13,6 +13,7 @@ interface CardProps {
     logo?: React.ReactNode;
     cta?: string;
     image: string | StaticImport;
+    first?: boolean
 }
 
 export const cards = {
@@ -22,6 +23,7 @@ export const cards = {
         logo: <BadgeDollarSign />,
         cta: "Get Started",
         image: marketingImage,
+        first: true,
     },
     "2": {
         title: "Health Consulting",
@@ -39,7 +41,7 @@ export const cards = {
     },
 };
 
-export const ServicesCard: React.FC<CardProps> = ({ title, description, logo, cta, image }) => {
+export const ServicesCard: React.FC<CardProps> = ({ title, description, logo, cta, image, first = false }) => {
     return (
         <>
             <div className="md:hidden  relative w-full h-42 rounded-2xl overflow-hidden hover:scale-105 hover:shadow-xl hover:shadow-neutral-500/30 transition-all">
@@ -47,6 +49,7 @@ export const ServicesCard: React.FC<CardProps> = ({ title, description, logo, ct
                     src={image}
                     alt="..."
                     fill
+                    priority={first || false}
                     placeholder="blur"
                     className="object-cover"
                 />
