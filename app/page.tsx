@@ -13,7 +13,7 @@ export default function Home() {
   return (
     //<AuroraBackground>
     <div className="min-h-screen  w-full flex flex-col  bg-background text-foreground">
-      {/* <div className="relative">
+      <div className="relative">
         <div className="absolute inset-0 h-[100vh] z-0">
           <Image
             src={backgroundImage}
@@ -25,7 +25,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-bg-background dark:to-background" />
 
         </div>
-      </div> */}
+      </div>
       <Upper />
       <NavBar />
       <Hero />
